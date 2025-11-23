@@ -241,7 +241,7 @@ class AnnotationWindow(Gtk.ApplicationWindow):
 
     def _on_draw(self, area, cr, width, height, user_data=None):
         """Draw the image and current annotations"""
-        # Convert PIL Image to surface
+        # Convert PIL Image to pixbuf
         img_byte_arr = io.BytesIO()
         self.image.save(img_byte_arr, format='PNG')
         img_byte_arr.seek(0)
@@ -251,10 +251,10 @@ class AnnotationWindow(Gtk.ApplicationWindow):
         loader.close()
 
         pixbuf = loader.get_pixbuf()
-        texture = Gdk.Texture.new_for_pixbuf(pixbuf)
 
-        # Draw the image
-        texture.download(cr.get_target().get_data(), cr.get_target().get_stride())
+        # Draw the pixbuf using cairo
+        Gdk.cairo_set_source_pixbuf(cr, pixbuf, 0, 0)
+        cr.paint()
 
     def _on_undo(self, button):
         """Undo last annotation"""
