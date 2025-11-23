@@ -53,19 +53,19 @@ sudo apt install grim slurp wl-clipboard python3-gi python3-gi-cairo gir1.2-gtk-
 
 **Option 1: Development Install**
 ```bash
-git clone https://github.com/yourusername/snip.git
+git clone https://github.com/danielshamsudin/snip.git
 cd snip
 pip install -e .
 ```
 
 **Option 2: Direct Install**
 ```bash
-pip install git+https://github.com/yourusername/snip.git
+pip install git+https://github.com/danielshamsudin/snip.git
 ```
 
 **Option 3: Run Without Installing**
 ```bash
-git clone https://github.com/yourusername/snip.git
+git clone https://github.com/danielshamsudin/snip.git
 cd snip
 python -m snip.main
 ```
