@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Snip
+GenericName=Screenshot Tool
+Comment=Wayland screenshot tool with annotation and pinning
+Exec=snip
+Icon=screenshot
+Terminal=false
+Categories=Graphics;Utility;
+Keywords=screenshot;capture;screen;annotate;
